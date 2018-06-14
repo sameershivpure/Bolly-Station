@@ -1,0 +1,31 @@
+.logo{
+	width: 15%;
+	margin-right: 2%;
+}
+
+.header{
+	background-color: #135CEC;
+	opacity: 0.9;
+	padding: 1% 1%;
+	
+}
+
+.header-content{
+	font-size: 2em;
+}
+
+.nav{
+	padding-top: 2%;
+}
+
+.navigation a{
+	color: #212529;
+}
+
+h1{
+	display: inline-block;
+}
+
+.main{
+	min-height: 80vh;
+}
