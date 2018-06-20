@@ -15,8 +15,7 @@ class Dashboard extends Component{
 
 	mapStateToAlbum(session){
 		return {
-			data: session.songs,
-			list: session.playlist
+			data: session.songs
 		}
 	}
 

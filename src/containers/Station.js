@@ -15,7 +15,7 @@ const session = createStore(playlist);
 
 class Station extends Component {
   render() {
-  	console.log(session.getState());
+  	
     return (
     <Provider store={session} >
       <BrowserRouter>

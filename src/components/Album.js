@@ -17,7 +17,6 @@ export default class Album extends Component {
 			records.push(<AlbumRow key={count} onClick={this.props.onSongSelect} data={this.props.data.slice(i,i+this.state.cols)} />);
 			count++;
 		}
-		console.log(this.props.list);
 		return (
 			<div className="container-fluid album">
 				{records}

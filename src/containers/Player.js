@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import PlayerConsole, { PlayerButton } from '../components/PlayerConsole';
+import PlayerConsole, { PlayerButton, PlayerHeader } from '../components/PlayerConsole';
+import { connect } from 'react-redux';
 import PlayList from './PlayList';
 import './Player.css';
 
@@ -16,12 +17,21 @@ export default class Player extends Component {
 		));
 	}
 
+	mapStateToPlayList = (session) => {
+		return {
+			playlist:session.playlist
+		}
+	}
+
 	render() {
+
+		const PlayListStore = connect(this.mapStateToPlayList)(PlayList);
 		return (
 			<div className="">
 				<PlayerButton onButtonClick={this.playerButtonHandler} />
-				{this.state.showConsole && <PlayerConsole closeConsole={this.playerButtonHandler}>
-						<PlayList />
+				{this.state.showConsole && <PlayerConsole>
+						<PlayerHeader onClick={this.playerButtonHandler}/>
+						<PlayListStore />
 					</PlayerConsole>
 				 }
 			</div>

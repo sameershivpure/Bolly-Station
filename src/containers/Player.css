@@ -43,6 +43,7 @@
 .player-details{
 	display: flex;
 	height: 70vh;
+	margin: 0.5%;
 }
 
 .player-controls{
@@ -52,4 +53,23 @@
 
 .player-controls .btn{
 	margin: 1%;
+}
+
+.player-info{
+	width: 60%;
+}
+
+.player-playlist{
+	border-left: inset;
+	width: 40%;
+}
+
+.playlist-block{
+	display: grid;
+	width: 100%;
+}
+
+.playlist-row{
+	border: solid 1px;
+	width: inherit;
 }

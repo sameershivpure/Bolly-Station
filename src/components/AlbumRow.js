@@ -6,7 +6,7 @@ export default class AlbumRow extends Component {
 	render() {
 
 		let row = this.props.data.map(item => {
-			return <AlbumItem key={item.name} onClick={this.props.onClick} data={item}/>
+			return <AlbumItem key={item.id} onClick={this.props.onClick} data={item}/>
 		});
 		return (
 			<div className="clearfix row album-row">

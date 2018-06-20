@@ -9,7 +9,7 @@ export const PlayerButton = props => {
 		)
 };
 
-const PlayerHeader = props => {
+export const PlayerHeader = props => {
 	return(
 		<div className="player-header">
 			<div className="player-title">Now Playing...</div>
@@ -23,7 +23,6 @@ export default class PlayerConsole extends Component {
 		return (
 			<div className="player-console">
 				<div className="player-content">
-					<PlayerHeader onClick={this.props.closeConsole}/>
 					{ this.props.children }
 				</div>
 			</div>
