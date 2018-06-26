@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import PlayerConsole, { PlayerButton, PlayerHeader } from '../components/PlayerConsole';
 import { connect } from 'react-redux';
-import PlayList from './PlayList';
-import './Player.css';
+import PlayList from '../components/PlayList';
 
 export default class Player extends Component {
 	

@@ -8,7 +8,6 @@ import {addToPlaylist} from '../actions';
 class Dashboard extends Component{
 	constructor(props){
 		super(props);
-		this.state = {};
 		this.mapStateToAlbum = this.mapStateToAlbum.bind(this);
 		this.mapDispatchToProps = this.mapDispatchToProps.bind(this);
 	}
@@ -21,7 +20,7 @@ class Dashboard extends Component{
 
 	mapDispatchToProps(dispatch){
 		return{
-			onSongSelect : id => { dispatch(addToPlaylist(id))}
+			onClick : id => { dispatch(addToPlaylist(id))}
 		}
 	}
 
@@ -31,10 +30,8 @@ class Dashboard extends Component{
 
 		return (
 			<PageWrapper>
-				<div>
 					<h2>Songs</h2>
 					<AlbumStore />
-				</div>
 			</PageWrapper>
 		)	
 	}
