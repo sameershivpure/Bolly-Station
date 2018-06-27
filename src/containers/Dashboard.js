@@ -20,7 +20,7 @@ class Dashboard extends Component{
 
 	mapDispatchToProps(dispatch){
 		return{
-			onClick : id => { dispatch(addToPlaylist(id))}
+			onClick : (id) => { dispatch(addToPlaylist(id))}
 		}
 	}
 

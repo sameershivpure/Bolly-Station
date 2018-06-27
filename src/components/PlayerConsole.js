@@ -12,7 +12,7 @@ export const PlayerButton = props => {
 export const PlayerHeader = props => {
 	return(
 		<div className="player-header">
-			<div className="player-title">Now Playing...</div>
+			<div className="player-title">{props.data ? props.data.name : "Now playing..."}</div>
 			<button className="btn btn-outline player-close" onClick={() => props.onClick()}>X</button>
 		</div>
 	)

@@ -18,18 +18,27 @@ export default class Player extends Component {
 
 	mapStateToPlayList = (session) => {
 		return {
-			playlist:session.playlist
+			playlist:session.playlist,
+			current_song: session.current_song
 		}
+	}
+
+	headerState = (session) => {
+		return {
+			data:session.current_song
+		};
 	}
 
 	render() {
 
 		const PlayListStore = connect(this.mapStateToPlayList)(PlayList);
+		const HeaderStore = connect(this.headerState)(PlayerHeader);
+
 		return (
 			<div className="">
 				<PlayerButton onButtonClick={this.playerButtonHandler} />
 				{this.state.showConsole && <PlayerConsole>
-						<PlayerHeader onClick={this.playerButtonHandler}/>
+						<HeaderStore onClick={this.playerButtonHandler}/>
 						<PlayListStore />
 					</PlayerConsole>
 				 }

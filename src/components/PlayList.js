@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Player.css';
-import { PlayListObject} from './ItemWrapper';
+import { PlayListObject } from './ItemWrapper';
 
 const List = props => {
 
@@ -19,6 +19,7 @@ const List = props => {
 }
 
 export default class PlayList extends Component {
+
 	render() {
 		return (
 			<div className="player-body">

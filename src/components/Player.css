@@ -62,6 +62,8 @@
 .player-playlist{
 	border-left: inset;
 	width: 40%;
+	overflow-y: auto;
+	overflow-x: hidden;
 }
 
 .playlist-block{
@@ -70,6 +72,8 @@
 }
 
 .playlist-row{
-	border: solid 1px;
+	border-bottom: inset;
 	width: inherit;
+	margin-bottom: 2%;
+	border-radius: 5px;
 }
